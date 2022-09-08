@@ -13,6 +13,7 @@
                 <h1 class="p-name post-title{{ if .Params.favorite }} favorite{{end}}{{ if .Params.draft }} draft{{end}}">{{ trim .Title  " " }}</h1>
 
                 {{ partial "post-language-switcher.html" . }}
+                {{ partial "publish-info.html" . }}
             </header>
         </div>
         <div class="content e-content">

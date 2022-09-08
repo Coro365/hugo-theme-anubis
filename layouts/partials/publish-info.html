@@ -1,0 +1,14 @@
+{{ $dateFormat := "2006-01-02" }}
+{{ if .Site.Params.dateFormat }}
+    {{ $dateFormat = .Site.Params.dateFormat }}
+{{ end }}
+{{ $repoURL := "https://github.com/Coro365/blog.coro3.net/commits/main/" }}
+<div class="publish-info">
+    <ul>
+        <li>Publish: {{ .Params.date.Format $dateFormat }}</li>
+        <li>Lastmod: {{ .Params.lastmod.Format $dateFormat }}</li>
+    </ul>
+    <div class="changelog">
+        <a href="{{ $repoURL }}public{{ .RelPermalink }}index.html">ChangeLog</a>
+    </div>
+</div>
